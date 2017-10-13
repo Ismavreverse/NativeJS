@@ -1,12 +1,9 @@
 function basicOp(operation, value1, value2) {
-  var result = 0;
-  if(operation === '+') {
-    result = value1 + value2;
-  } else if (operation === '-'){
-    result = value1 - value2;
-  } else if (operation === '*'){
-    result = value1 * value2;
-  } else if(operation === '/'){
-    result = value1 / value2;}
-  return result;
+  var obj = { 
+     '+' : function(value1, value2) { return value1 + value2; },
+     '-' : function(value1, value2) { return value1 - value2; },
+     '*' : function(value1, value2) { return value1 * value2; },
+     '/' : function(value1, value2) { return value1 / value2; }
+  }
+  return obj[operation](value1, value2);
 }
