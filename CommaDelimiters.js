@@ -1,4 +1,3 @@
-function printArray(array){
-  //show me the code!
+function printArray(array) {
   return array.join(',');
 }
